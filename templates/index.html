@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список подарков</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <h1>Список подарков</h1>
+    <table>
+        <tr>
+            <th>ФИО</th>
+            <th>Название подарка</th>
+            <th>Стоимость</th>
+            <th>Статус</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
